@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <act_window id="calc_action" name="calc" res_model="calc" />
+
+        <record id="calc_view_tree" model="ir.ui.view">
+            <field name="name">Calc1</field>
+            <field name="model">calc</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="numero_uno" />
+                    <field name="numero_dos" />
+                    <field name="suma" />
+                    <field name="resta" />
+                    <field name="multiplicacion" />
+                    <field name="division" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="calculadora_view_search" model="ir.ui.view">
+            <field name="name">Calc2</field>
+            <field name="model">calc</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="numero_uno" />
+                    <field name="numero_dos" />
+                    <field name="suma" />
+                    <field name="resta" />
+                    <field name="multiplicacion" />
+                    <field name="division" />
+                </search>
+            </field>
+        </record>
+
+        <menuitem name="Calculadora" id="menu_principal" sequence="10" />
+        <menuitem name="Calc" id="menu_calc" parent="menu_principal" action="calc_action" sequence="10"/>
+    </data>
+</odoo>
